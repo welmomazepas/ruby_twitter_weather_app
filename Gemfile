@@ -12,6 +12,11 @@ gem "sqlite3", "~> 1.4.2"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
+#Twitter Bot SDK [https://github.com/julianfssen/tweetkit]
+gem 'tweetkit', "~> 0.2"
+
+gem 'httparty'
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
