@@ -2,6 +2,18 @@ require 'httparty'
 
 class OpenWeather
 
+    def get_city_weather(city, state, country_code)
+        latitude, longitude = get_geo_locale(city, state, country_code)
+        if latitude.present? && longitude.present?
+            weather_info = get_weather_onecall(latitude, longitude)
+            if weather_info.present?
+                return weather_info
+            end
+        end
+        
+        return nil
+    end
+
     def get_geo_locale(city, state, country_code)
         begin 
             if state.length > 2
